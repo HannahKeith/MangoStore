@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<%-include('./partials/head.ejs')%>
+</head>
+<header>
+  <%-include('./partials/header.ejs')%>
+</header>
+    <body>
+      <style>
+        body {
+          background-color: white;
+        }
+
+        form {
+          margin-left: 5%;
+          margin-bottom: 10%;
+        }
+
+        #new-fruit {
+          font-size: 35px;
+        }
+      </style>
+        <h1>Enter New Tree</h1>
+        <form action="/mango" method="POST">
+            Name: <input type="text" name="name" /><br/>
+            Description: <input type="text" name="description" /><br/>
+            Image: <input type="text" name="img" /><br/>
+            Price: <input type="text" name="price" /><br/>
+            Qty: <input type="text" name="qty" /><br/>
+
+
+            <input id="new-fruit" type="submit" name="" value="Submit New Tree"/>
+        </form>
+    </body>
+</html>

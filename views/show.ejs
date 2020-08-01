@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+<%-include('./partials/head.ejs')%>
+  </head>
+
+  <header>
+    <%-include('./partials/header.ejs')%>
+  </header>
+  <body>
+
+
+
+
+    <div class="show-box">
+
+      <div class="title">
+      <h2><%=product.name%></h2>
+      </div>
+
+      <div class="img-container">
+        <img class="show-img" src="<%=product.img%>" alt="product image">
+      </div>
+
+      <div class="description">
+        <h2>Description:</h2>
+        <p><%=product.description%> </p>
+      </div>
+        </div>
+
+      <div class="details">
+        <h2>Price: $ <%=product.price%></h2>
+
+        <h2>Qty: <%=product.qty%></h2>
+
+
+
+
+
+
+
+
+    </div>
+
+
+    <!-- <nav>
+  <a class="return" href="/mango">Back to Store Index</a>
+</nav> -->
+
+<a href="/mango">
+<button type="button" name="button">Back to Store Index</button>
+</a>
+
+<!-- IDEA: delete button -->
+<form action="/mango/<%=product.id %>?_method=DELETE" method="POST">
+  <input type="submit" value="DELETE"/>
+</form>
+<!-- IDEA: edit button -->
+<a href="/mango/<%=product.id%>/edit">
+<button type="button" name="button">Edit</button>
+</a>
+
+
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+<%-include('./partials/head.ejs')%>
+  </head>
+  <header>
+    <%-include('./partials/header.ejs')%>
+  </header>
+  <body>
+    <style>
+      body {
+        background-color: #b3e6ff;
+      }
+    </style>
+
+<div class="button-div">
+    <a href="/mango/new">
+        <button type="button" name="button">Enter a New Tree</button>
+      </a>
+  </div>
+
+      <div class="container">
+        <% for(let i = 0; i < mangoes.length; i++){ %>
+          <a href="/mango/<%=mangoes[i].id%>">
+            <img class='index-img' src="<%=mangoes[i].img%>" alt="<%=mangoes[i].name%>">
+          </a>
+        <% } %>
+
+      </div>
+
+
+
+
+
+
+  </body>
+</html>
